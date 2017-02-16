@@ -48,7 +48,7 @@ class GraphNvD3 extends ModuleGraphEngine
 
 		Module::__construct();
 
-		$this->displayName = $this->l('NVD3 Charts');
+		$this->displayName = $this->trans('NVD3 Charts', array(), 'Modules.Graphnvd3.Admin');
 		$this->description = '';
     }
 
