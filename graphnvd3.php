@@ -35,8 +35,8 @@ class GraphNvD3 extends ModuleGraphEngine
 	private $_legend;
 	private $_titles;
 
-    function __construct($type = null)
-    {
+	function __construct($type = null)
+	{
 		if ($type !== null)
 			return parent::__construct($type);
 
@@ -48,9 +48,10 @@ class GraphNvD3 extends ModuleGraphEngine
 
 		Module::__construct();
 
-		$this->displayName = $this->l('NVD3 Charts');
+		$this->displayName = $this->trans('NVD3 Charts', array(), 'Modules.Graphnvd3.Admin');
 		$this->description = '';
-    }
+		$this->ps_versions_compliancy = array('min' => '1.7.1.0', 'max' => _PS_VERSION_);
+	}
 
 	function install()
 	{
