@@ -2,7 +2,9 @@
 
 ## About
 
+NVD3 (http://nvd3.org/) is JavaScript library that was built specifically to generate beautiful charts using D3.js (http://d3js.org/), a JavaScript library built to manipulate documents based on data.
 
+This module enables the NVD3 charting code for your own uses, providing you with ever so useful graphs.
 
 ## Contributing
 
