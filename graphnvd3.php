@@ -176,6 +176,6 @@ class GraphNvD3 extends ModuleGraphEngine
 					$nvd3_values[] = array('x' => $x, 'y' => $y);
 				$array['data'][] = array('values' => $nvd3_values, 'key' => $this->_titles['main'][$layer]);
 			}
-		echo preg_replace('/"([0-9]+)"/', '$1', Tools::jsonEncode($array));
+		echo preg_replace('/"([0-9]+)"/', '$1', json_encode($array));
 	}
 }
