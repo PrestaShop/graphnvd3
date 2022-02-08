@@ -38,7 +38,9 @@ class GraphNvD3 extends ModuleGraphEngine
     public function __construct($type = null)
     {
         if ($type !== null) {
-            return parent::__construct($type);
+            parent::__construct($type);
+
+            return;
         }
 
         $this->name = 'graphnvd3';
