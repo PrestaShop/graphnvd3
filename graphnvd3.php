@@ -108,6 +108,7 @@ class GraphNvD3 extends ModuleGraphEngine
 			success: function(jsonData){
 				nv.addGraph(function(){
 					var chart = ' . $nvd3_func[$params['type']] . ';
+					chart.legend.align(false);
 
 					if (jsonData.axisLabels.xAxis != null)
 						chart.xAxis.axisLabel(jsonData.axisLabels.xAxis);
