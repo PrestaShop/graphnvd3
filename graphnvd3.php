@@ -29,8 +29,8 @@ if (!defined('_PS_VERSION_')) {
 
 class GraphNvD3 extends ModuleGraphEngine
 {
-    private $_width;
-    private $_height;
+    private static $_width;
+    private static $_height;
     private $_values;
     private $_legend;
     private $_titles;
@@ -77,6 +77,12 @@ class GraphNvD3 extends ModuleGraphEngine
     {
         static $divid = 1;
 
+        if (!isset($params['height'])) {
+            $params['height'] = self::$_height;
+        }
+        if (!isset($params['width'])) {
+            $params['width'] = self::$_width;
+        }
         if (strpos($params['width'], '%') !== false) {
             $params['width'] = (int) preg_replace('/\s*%\s*/', '', $params['width']) . '%';
         } else {
@@ -136,8 +142,8 @@ class GraphNvD3 extends ModuleGraphEngine
 
     public function setSize($width, $height)
     {
-        $this->_width = $width;
-        $this->_height = $height;
+        self::$_width = $width;
+        self::$_height = $height;
     }
 
     public function setLegend($legend)
