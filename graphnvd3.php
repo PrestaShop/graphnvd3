@@ -53,7 +53,7 @@ class GraphNvD3 extends ModuleGraphEngine
 
         $this->displayName = $this->trans('NVD3 Charts', [], 'Modules.Graphnvd3.Admin');
         $this->description = $this->trans('Enable the NVD3 charting code for your own uses, providing you with ever so useful graphs.', [], 'Modules.Graphnvd3.Admin');
-        $this->ps_versions_compliancy = ['min' => '1.7.1.0', 'max' => _PS_VERSION_];
+        $this->ps_versions_compliancy = ['min' => '8.2.0', 'max' => _PS_VERSION_];
     }
 
     public function install()
